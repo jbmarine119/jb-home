@@ -44,6 +44,8 @@ import kGreenFuelLogo from './assets/images/k_green_fuel_logo_1779438494661.png'
 import sunrichLogo from './assets/images/sunrich_logo_1780292627734.png';
 // @ts-ignore
 import atlanticGlobalShippingLogo from './assets/images/atlantic_global_shipping_logo_1780295139015.png';
+// @ts-ignore
+import namaatMtechLogo from './assets/images/namaat.jpg';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -694,17 +696,14 @@ export default function App() {
               </div>
 
               {[
-                { title: 'Full Port Agency', desc: 'Comprehensive vessel attending and coordination.', icon: Ship },
+                { title: 'Bunkering Arrangement', desc: 'Fuel and lubrication supply coordination including Methanol and Bio-Diesel.', icon: Droplets },
                 { title: 'Repair & Dry-docking', desc: 'Technical support and shipyard liaison.', icon: Wrench },
                 { title: 'Ship Delivery (S&P)', desc: 'Professional support for vessel handovers.', icon: ClipboardCheck },
                 { title: 'Protective Agency', desc: 'Safeguarding owners & charterers interests.', icon: ShieldCheck },
-                { title: 'Bunkering Arrangement', desc: 'Fuel and lubrication supply coordination including Methanol and Bio-Diesel.', icon: Droplets },
+                { title: 'Full Port Agency', desc: 'Comprehensive vessel attending and coordination.', icon: Ship },
                 { title: 'Crew Change', desc: 'Logistics, visas, and transport for seafarers.', icon: Users },
-                { title: 'Marine Technical Assistance', desc: 'Expert technical and operational support.', icon: Settings },
                 { title: 'Husbandry Attendance', desc: 'Vessel requirements and local management.', icon: Anchor },
                 { title: 'Spares & Provisions', desc: 'Timely supply of parts and stores.', icon: Truck },
-                { title: 'Government Approvals', desc: 'Handling permits and regulatory paperwork.', icon: FileText },
-                { title: 'Global Shipping Activities', desc: 'Flexible maritime solutions on demand.', icon: LayoutGrid },
                 { title: '24/7 Customer Service', desc: 'Round-the-clock operational availability.', icon: Clock }
               ].map((item, i) => (
                 <motion.div 
@@ -759,7 +758,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mx-auto">
             {[
               {
                 name: 'K-GREEN FUEL',
@@ -775,6 +774,11 @@ export default function App() {
                 name: 'Atlantic Global Shipping',
                 url: 'https://www.atlanticglobalshipping.com',
                 logo: atlanticGlobalShippingLogo
+              },
+              {
+                name: 'NAMAAT M-TECH',
+                url: 'http://namaat.co.kr',
+                logo: namaatMtechLogo
               }
             ].map((partner, i) => (
               <motion.a
