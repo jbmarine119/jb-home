@@ -1,5 +1,6 @@
 {
-  "name": "Copy of JB MARINE CO., LTD.",
+  "name": "JB MARINE CO., LTD.",
   "description": "Professional Shipping Agency and Cargo Brokerage services in Korea.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

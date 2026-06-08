@@ -39,7 +39,7 @@ import * as topojson from 'topojson-client';
 // @ts-ignore
 import companyLogo from './assets/images/JB LOGO.png';
 // @ts-ignore
-import kGreenFuelLogo from './assets/images/k_green_fuel_logo_1779438494661.png';
+import kGreenFuelLogo from './assets/images/KGREEN.jpg';
 // @ts-ignore
 import sunrichLogo from './assets/images/sunrich_logo_1780292627734.png';
 // @ts-ignore
