@@ -1061,13 +1061,13 @@ export default function App() {
           <form 
             onSubmit={(e) => {
               e.preventDefault();
-              if (adminPasswordInput.toLowerCase() === 'admin' || adminPasswordInput === 'jbmarine') {
+              if (adminPasswordInput === 'JBjb119!') {
                 setIsAdminMode(true);
                 setIsPasswordModalOpen(false);
                 setAdminPasswordInput('');
                 setPasswordError('');
               } else {
-                setPasswordError("Access denied. Please use the passcode 'admin' or 'jbmarine' for demonstration.");
+                setPasswordError("Access denied. Please check your password and try again.");
               }
             }}
             className="space-y-6 max-w-md mx-auto py-4"
@@ -1099,7 +1099,7 @@ export default function App() {
                 className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white text-slate-800 font-mono transition-all text-center tracking-widest text-lg"
               />
               <p className="text-center text-xs text-slate-400 mt-2">
-                🔒 Demo Password: <code className="font-bold bg-slate-100 px-1.5 py-0.5 rounded text-slate-600">admin</code> or <code className="font-bold bg-slate-100 px-1.5 py-0.5 rounded text-slate-600">jbmarine</code>
+                🔒 Enterprise security system protection
               </p>
             </div>
 
