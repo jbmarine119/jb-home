@@ -46,6 +46,8 @@ import sunrichLogo from './assets/images/sunrich_logo_1780292627734.png';
 import atlanticGlobalShippingLogo from './assets/images/atlantic_global_shipping_logo_1780295139015.png';
 // @ts-ignore
 import namaatMtechLogo from './assets/images/namaat.jpg';
+// @ts-ignore
+import newShinYoungLogo from './assets/images/NSY.jpg';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -758,27 +760,37 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mx-auto">
             {[
               {
                 name: 'K-GREEN FUEL',
                 url: 'http://kgreenfuel.com',
-                logo: kGreenFuelLogo
+                logo: kGreenFuelLogo,
+                description: 'Eco-friendly marine fuel supply and renewable energy partner'
               },
               {
                 name: 'Sunrich Group',
                 url: 'https://www.sunrichgroup.com',
-                logo: sunrichLogo
+                logo: sunrichLogo,
+                description: 'Global integrated maritime shipping and port logistics services'
               },
               {
                 name: 'Atlantic Global Shipping',
                 url: 'https://www.atlanticglobalshipping.com',
-                logo: atlanticGlobalShippingLogo
+                logo: atlanticGlobalShippingLogo,
+                description: 'Global shipping agency - India'
               },
               {
                 name: 'NAMAAT M-TECH',
                 url: 'http://namaat.co.kr',
-                logo: namaatMtechLogo
+                logo: namaatMtechLogo,
+                description: 'Marine maintenance service and spare parts supply'
+              },
+              {
+                name: 'NEW SHIN YOUNG CO., LTD.',
+                url: 'http://www.nser.co.kr',
+                logo: newShinYoungLogo,
+                description: 'Supplying marine stores and special marine cleaning chemicals'
               }
             ].map((partner, i) => (
               <motion.a
@@ -792,15 +804,26 @@ export default function App() {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="w-full h-full object-contain transition-all duration-500"
+                  className="w-full h-full object-contain transition-all duration-500 group-hover:scale-95 group-hover:opacity-20"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.nextElementSibling?.classList.remove('hidden');
                   }}
                 />
-                <div className="hidden text-2xl font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
+                <div className="hidden text-xl font-bold text-slate-400 group-hover:text-blue-600 text-center px-4">
                   {partner.name}
+                </div>
+                
+                {/* Elegant Hover Description Overlay */}
+                <div className="absolute inset-0 bg-slate-900/90 flex flex-col justify-center items-center text-center p-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out backdrop-blur-[2px]">
+                  <h4 className="font-bold text-sm tracking-wide text-blue-400 mb-2">{partner.name}</h4>
+                  <p className="text-xs text-slate-250 leading-relaxed font-medium">
+                    {partner.description}
+                  </p>
+                  <span className="mt-4 text-[10px] uppercase tracking-wider text-slate-300 bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm font-semibold transition-colors hover:bg-blue-600 hover:text-white">
+                    Visit Website ↗
+                  </span>
                 </div>
               </motion.a>
             ))}
